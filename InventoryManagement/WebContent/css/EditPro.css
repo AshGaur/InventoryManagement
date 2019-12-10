@@ -1,0 +1,125 @@
+#nav
+{
+position: absolute;    
+top: 60px;
+left: 5px;    
+background-color: black;
+height: 43px;
+width: 100%;
+}
+#home
+{
+    position: absolute;
+    left: 5px;
+    width: 80px;
+    border-radius: 15px;
+}
+a 
+{
+padding: 4px 4px;
+text-decoration: none;
+color: black;
+background-color: white;
+font-family: californian fb;    
+position: absolute;
+border: 1px solid black;
+border-radius: 5px;    
+left: 5px;
+top: 5px;    
+text-align: center;    
+}
+a:hover
+{
+background-color: crimson;
+color: white;    
+}
+#dropdown:hover #dropdown-content
+{
+    display:block;
+}
+#dropdown-content
+{
+    
+    display: none;
+    border: 1px solid lightgray;
+    position: absolute;
+    top: 34px;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px lightgray;
+}
+#dropdown
+{
+    display: block;
+    background-color: black;
+    width: 50px;
+    height: 40px;
+    position: absolute;
+    left: 75%;
+    top: 3px;
+}
+#dropdown-content a:hover
+{
+    background-color: crimson;
+    color: white;
+}
+#link1
+{
+    position: absolute;
+    padding: 10 15;
+    border: 1px solid lightgray;
+    box-shadow: 0px 8px 16px 0px lightgray;
+}
+#profile 
+{
+background-color: white;    
+border-radius: 1000px;
+padding: 0px;  
+border: 1px solid black;    
+}
+#firsthead
+{
+position: absolute;
+top: 133px;
+left: 40%;
+font-size: 32px;    
+font-family: californian fb;    
+}
+table
+{
+	border-collapse: collapse;
+	position: absolute;
+	left: 32%;
+	top: 40%;
+	width: 532px;
+}
+#submit
+{
+position: absolute;
+top: 95%;
+left: 47%;
+background-color: crimson;
+height: 40px;
+width: 90px;
+text-align: center;
+font-size: 18px;
+font-weight: bold;
+color:white;
+font-family: californian fb;    
+border: 1px solid white;    
+}
+td
+{
+padding-bottom: 15px;
+}
+input[type=text],input[type=password],input[type=email],input[type=date]
+{
+border: 2px solid lightgray;    
+width: 300px;
+height: 25px;
+padding: 2px;    
+}
+p
+{
+font-size: 18px;
+font-family: californian fb;    
+}
