@@ -1,0 +1,255 @@
+#nav
+{
+position: absolute;    
+top: 60px;
+left: 5px;    
+background-color: black;
+height: 43px;
+width: 100%;
+}
+#home
+{
+    position: absolute;
+    left: 5px;
+    width: 80px;
+    border-radius: 15px;
+}
+#managest
+{
+    position: absolute;
+    width: 110px;
+    left: 115px;
+    border-radius: 15px;
+}
+a 
+{
+padding: 4px 4px;
+text-decoration: none;
+color: black;
+background-color: white;
+font-family: californian fb;    
+position: absolute;
+border: 1px solid black;
+border-radius: 5px;    
+left: 5px;
+top: 5px;    
+text-align: center;    
+}
+a:hover
+{
+background-color: crimson;
+color: white;    
+}
+#dropdown:hover #dropdown-content
+{
+    display:block;
+}
+#dropdown-content
+{
+    
+    display: none;
+    border: 1px solid lightgray;
+    position: absolute;
+    top: 34px;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px lightgray;
+}
+#dropdown
+{
+    display: block;
+    background-color: black;
+    width: 50px;
+    height: 40px;
+    position: absolute;
+    left: 75%;
+    top: 3px;
+}
+#dropdown-content a:hover
+{
+    background-color: crimson;
+    color: white;
+}
+#link1
+{
+    position: absolute;
+    padding: 10 15;
+    border: 1px solid lightgray;
+    box-shadow: 0px 8px 16px 0px lightgray;
+}
+#profile 
+{
+background-color: white;    
+border-radius: 1000px;
+padding: 0px;  
+border: 1px solid black;    
+}
+#firsthead
+{
+position: absolute;
+top: 133px;
+left: 45%;
+font-size: 32px;    
+font-family: californian fb;    
+}
+#scan
+{
+    
+    position: absolute;
+    top: 45%;
+    left: 4%;
+    height: 170px;
+    width: 300px;
+    border: 2px solid black;
+    background-color: F2F2F2; 
+}
+#subHere
+{
+    display: none;
+}
+#sID
+{
+    position: absolute;
+    top: 55%;
+    left: 8%;
+    width: 251px;
+    height: 25px;
+    padding: 5px;
+    
+}
+#divhead
+{
+    position: absolute;
+    top: 5%;
+    left: 12%;
+    font-size: 28px;
+    font-family: californian fb;
+}
+#pid
+{
+    position: absolute;
+    top: 35%;
+    left: 5%;
+    padding: 5px;
+}
+#qty
+{
+    position: absolute;
+    top: 55%;
+    left: 5%;
+    padding: 5px;
+}
+#sub:hover
+{
+    background-color: crimson;
+    color: white;
+}
+#sub
+{
+    position: absolute;
+    top: 75%;
+    left: 20%;
+    width:100px;
+    height: 30px;
+    background-color: lightgrey;
+    border: 1px solid black;
+    font-weight: bold;
+}
+#manual
+{
+    display: none;
+    background-color: aquamarine;
+    border: 2px solid black;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    left: 4%;
+    top: 45%;
+}
+#manualhead
+{
+    font-size: 25px;
+    font-family: californian fb;
+    position: absolute;
+    left: 10%;
+    top: 1%;
+}
+.btn
+{
+    position: absolute;
+    top: 35%;
+    left: 80px;
+    height: 55px;
+    width:150px;    
+}
+#sc
+{
+    display: none;
+}
+#org
+{
+	
+	position:relative;
+	
+	font-size: 20px;
+	font-weight:bold;
+}
+#bill
+{
+	
+	display:inline-block;
+    width: 500px;
+    height: 500px;
+    background-color:blanchedalmond;
+    border: 0.5px solid lightgrey;
+    position: absolute; 
+    top: 200px;
+    right: 50px;
+    z-index: -1;
+}
+#time
+{
+    color:black;
+    position: absolute;
+    top:0px;
+   	text-align:right;
+    z-index: 1;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: arial;
+}
+#date
+{
+    color:black;
+    position: absolute;
+    top:0px;
+  	text-align:left;
+    z-index: 1;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: arial;
+}
+.sno
+{
+	width: 1000px;
+}
+th
+{
+	border: 1px solid black;
+}
+td
+{
+	text-align:center;
+}
+
+#nb
+{
+	font-decoration:none;
+	position:absolute;
+	top:500px;
+	left:500px;
+}
+#print
+{
+	background-color:lightblue;
+	padding:10px;
+}

@@ -1,0 +1,118 @@
+.first
+{
+position: absolute;
+top: 30%;
+
+left:40%;
+background-color: #f2f2f2;
+padding: 3px;
+border: 2px solid #666666;
+border-radius: 20px;
+height: 294px;
+    width: 379px;
+    
+}
+
+.fhead
+{
+    color: black;
+    font-size: 28;
+    text-align: center;
+    padding-bottom: 5px;
+    font-family: californian fb;
+}
+
+input[type=email]:hover
+{
+    background-color: aliceblue;
+}
+
+input[type=email]:focus
+{
+    box-shadow: 2px 2px 2px 2px lightblue;
+}
+
+input[type=password]:hover
+{
+    background-color: aliceblue;
+}
+
+input[type=password]:focus
+{
+    box-shadow: 2px 2px 2px 2px lightblue;
+}
+.email
+{
+    position: absolute;
+    top: 90px;
+    left: 78.5px;
+     border: 1px groove lightgray;
+    font-family: californian fb;
+    height: 25px;
+    width: 222px;
+    background-color: white;
+    padding: 2px;
+    
+   
+}
+
+.pass
+{
+  position: absolute;
+   top: 146px;
+     left: 78.5px;
+    border: 1px groove lightgray;
+    font-family: californian fb;
+    height: 25px;
+    width: 222px;
+    background-color: white;
+    padding: 2px;
+}
+
+.forgot
+{
+    text-decoration: none;
+    position: absolute;
+    top: 195px;
+    left: 78.5px;
+    color: #169bd5;
+    
+}
+
+.sub
+{
+    position: absolute;
+    font-family: californian fb;
+    font-weight: bold;
+    top: 241px;
+    left: 119.5px;
+    height: 40px;
+    width: 140px;
+    box-shadow: 4px 5px 2px gray;
+    padding: 5px;
+    background-color: #66ffff;
+    color: black;
+    border: 1px solid black;
+    border-radius: 10px;
+      
+}
+
+#emalert
+{
+    position: absolute;
+    top: 105px;
+    left: 80px;
+    font-size: 15px;
+    color:red;
+    
+}
+
+#passalert
+{
+    position: absolute;
+    top: 161px;
+    left: 80px;
+    font-size: 15px;
+    color:red;
+    
+}
