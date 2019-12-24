@@ -8,7 +8,7 @@ public class DBInfo
 		try
 		{
 			Class.forName("com.mysql.jdbc.Driver");
-			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/invm","root","mypass");
+			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/inventoryyy","user","password");
 		}
 		catch(Exception e)
 		{
