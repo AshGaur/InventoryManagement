@@ -24,3 +24,7 @@ The StaffHome page consists of links:
 2. Issue Product
 3. Add Product
 4. Signout
+
+Owner updated with a feature to kickoff a connected staff on the portal and sign him out just by one click.
+Quantity check and validations updated for billing
+Successfully deployed on AWS Beanstalk with successful JDBC connection with AWS RDS.
