@@ -8,11 +8,14 @@
 <body>
 <div id="nav">
     <a class="navbutton" id="home" href="homeOwner.jsp">Home</a>
+	 <a id="manage" href="ManageProducts.jsp">Manage Products</a>
+    <a id="issue" href="check.jsp">Issue Product</a>
     <div id="dropdown">
     <a id="profile"><img src="images/profileicon.png" height="31px" width="31px"></a>
     <div id="dropdown-content"><a id="link1" href="signout.jsp">Signout</a></div>
     </div>    
-</div> <h1 id="firsthead">Owner Home</h1>         
+</div> 
+<h1 id="firsthead">Staff Home</h1>         
 <%
         String uname=null,id=null;
         Cookie[] c=request.getCookies();
@@ -62,12 +65,6 @@
         }
 %>
     <center>
-    <div id="links">
-    <h2>Important Links</h2><br> 
-    <a id="manage" href="ManageProducts.jsp">Manage Products</a>
-    <a id="addp" href="addpro.jsp">Add Product</a>
-    <a id="issue" href="check.jsp">Issue Product</a>
-   </div>
     </center>    
-    </body>
+</body>
 </html>    

@@ -37,7 +37,8 @@ $(document).ready(function(){
     </head>
 <body>
 <%    
-Cookie[] c=request.getCookies();
+	Cookie[] c=request.getCookies();
+	
 		boolean foundCookie=false;
         String id=null;
         String org=null;
@@ -80,7 +81,9 @@ Cookie[] c=request.getCookies();
         {
             response.sendRedirect("index.jsp");
         }
+	
 %>
+<h3 id="headalert"></h3> 
 <div id="nav">
     <a class="navbutton" id="home" href="homeOwner.jsp">Home</a>
     <a class="navbutton" id="managest" href="ManageStaff.jsp">Manage Staff</a>
@@ -95,27 +98,31 @@ Cookie[] c=request.getCookies();
 <h2 id="divhead">Enter Product ID</h2>    
 <form action="BillEntry" id="my_form" method="get" autocomplete="off">
      <label for="text-1"></label>
-     <input type="text" autofocus name="pid" id="sID" value="" id="my_button" placeholder="CLICK TO SCAN:" maxlength="7" />
+     <input type="text" name="pid" id="sID" value=""  placeholder="CLICK TO SCAN:" maxlength="7" autofocus/>
      <input type="hidden" name="lane" value="1" />
      <input id="subHere"type="submit" value="Submit"  />
 </form>
-</div> 
+</div>
 <a href="InitBill" id="nb">New Bill</a>
+
 <div id="manual">    
-<form name="myForm" action="BillEntry" method="post" autocomplete="off" onsubmit="return validateForm()">  
-<h3 id="manualhead">Manual Entry</h3>    
+<form name="myForm" action="BillEntry" method="post" autocomplete="off" onSubmit="return validateForm()">  
+<h3 id="manualhead">Manual Entry</h3>   
 <input type="text" name="pid" id="pid" placeholder="ProductID" required>
 <input type="text" name="qty" id="qty" placeholder="Quantity" required>
 <input type="submit" id="sub">
 </form>
 </div> 
-  
-<div id="bill">    
-  <p style="text-align:left"  id="date"></p>
-    <p id="time" style="text-align:right"></p>
+ <button id="print" onClick="PrintElem('bill')">Print Bill and Complete Order</button> 
+ 
+<div id="bill" style="border:0.5px solid #CCFF00">    
+  <p style="text-align:left"  id="date">Date</p>
+    <p id="time" style="text-align:right">Time</p>
+	<br>
 <%     
 out.println("<p id='org' style='font-family:book antiqua;font-weight:bold;text-align:center'>"+org+"</p>");
 %>
+<br>
     <table style="border:1px solid black">
     <col width="30">
     <col width="30">
@@ -161,16 +168,19 @@ catch(SQLException e)
 
 <%
 //Check if entered product id exists in database
+//Also get Product info to check qty
 ArrayList<Integer> ar=new ArrayList<Integer>();
+ArrayList<Integer> qt=new ArrayList<Integer>();
 try
 {
-	String query="select ProductID from products";
+	String query="select ProductID,Qty from products";
 	Connection con=DBInfo.con;
 	PreparedStatement ps=con.prepareStatement(query);
 	ResultSet rs=ps.executeQuery();
 	while(rs.next())
 	{
 		ar.add(Integer.parseInt(rs.getString(1)));	
+		qt.add(Integer.parseInt(rs.getString(2)));	
 	}
 }
 catch(SQLException e)
@@ -178,11 +188,10 @@ catch(SQLException e)
 	e.printStackTrace();
 }
 %> 
-  </tr></table></body></html> 
- </div>
+  </tr></table></body></html>  
+</div>
  
- <button id="print" onclick="PrintElem('bill')">Print</button>
- 
+
 <script>
 
 //To print div
@@ -210,34 +219,83 @@ function PrintElem(elem)
 function validateForm()
 {
 	<%
-    out.println("var pid=new Array(");
+    //making array pid(in js) from backend received database values
+	out.println("var pid=new Array(");
     int sz=ar.size();
     for(int i=0;i<sz-1;i++)
     {
         out.println(ar.get(i)+",");
     }
     out.println(ar.get(sz-1)+");");
+	
+    //making array pid(in js) from backend received database values
+	out.println("var qty=new Array(");
+    for(int i=0;i<sz-1;i++)
+    {
+        out.println(qt.get(i)+",");//because comma doesnt have to be entered after last element
+    }
+    out.println(qt.get(sz-1)+");");	
+	
 %>
 	var i;var flag=false;
-	for(i=0;i<pid.length;i++)
+	var pid1=document.getElementById("pid").value;
+	var pid2=document.getElementById("sID").value;
+	var valch;
+	var q;
+	if(pid2!="")
 	{
-		if(pid[i]==document.getElementById('pid').value)
+		valch=pid2;
+		q=1;
+	}
+	else if(pid1!="")
+	{
+		valch=pid1;
+		q=parseInt(document.getElementById("qty").value);
+	}
+	var ind=pid.indexOf(parseInt(valch));//index of entered id returned to compare with quantity index
+	
+	if(ind!=-1)
+	{
+		
+		if(q>qty[ind])
 		{
-			flag=true;
+			document.getElementById("headalert").innerHTML="Invalid Qty entered Qty available="+qty[ind]+" for ProductID="+valch;
+			flag= false;
+		}
+		else
+		{
+			document.getElementById("headalert").innerHTML="Qty entered is available loading bill......";
+			flag= true;
 		}
 	}
+	else
+	{
+		document.getElementById("headalert").innerHTML="Unknown Product ID";
+		flag=false;
+	}
+	
+	//return flag;
 	return flag;
 }
+
+//Binary Search to check Quantity
+
 
 //Date and time on the bill
 n=new Date();
 y=n.getFullYear();
 m=n.getMonth() + 1;
 d=n.getDate();  
-var ampm=n.getHours>=12 ? 'pm':'am';
+var min;
+min=n.getMinutes();
+if(min<=9)
+{
+	min="0"+min;
+}	
+var ampm=n.getHours>=12 ? 'am':'pm';
 h=n.getHours()>12?(n.getHours()-12):n.getHours();    
 document.getElementById("date").innerHTML=d+"/"+m+"/"+y; 
-document.getElementById("time").innerHTML=h+":"+n.getMinutes()+" "+ampm;    
+document.getElementById("time").innerHTML=h+":"+min+" "+ampm;    
     </script>    
 
 </body>    
