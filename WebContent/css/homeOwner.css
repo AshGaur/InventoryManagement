@@ -1,0 +1,149 @@
+#nav
+{
+position: absolute;    
+top: 60px;
+left: 5px;    
+background-color: black;
+height: 43px;
+width: 100%;
+}
+#home
+{
+	position: absolute;
+	left: 6px;
+	width: 80px;
+	border-radius: 15px;
+	top: 6px;
+}
+#managest
+{
+	position: absolute;
+	width: 110px;
+	left: 254px;
+	border-radius: 15px;
+	top: 6px;
+}
+a 
+{
+padding: 4px 4px;
+text-decoration: none;
+color: black;
+background-color: white;
+font-family: californian fb;    
+border: 1px solid black;
+border-radius: 5px;      
+text-align: center;    
+}
+a:hover
+{
+background-color: crimson;
+color: white;    
+}
+
+#dropdown:hover #dropdown-content
+{
+    display:block;
+}
+
+#dropdown-content
+{
+    
+    display: none;
+	border: 1px solid lightgray;
+	position: absolute;
+	top: 40px;
+	background-color: white;
+	box-shadow: 0px 8px 16px 0px lightgray;
+	width: 82px;
+	height: 30px;
+	left: 0px;
+}
+#dropdown
+{
+    display: block;
+    background-color: black;
+    width: 50px;
+    height: 40px;
+    position: absolute;
+    left: 75%;
+    top: 3px;
+}
+#dropdown-content a:hover
+{
+    background-color: crimson;
+    color: white;
+}
+#link1
+{
+	position: absolute;
+	padding: 10 15;
+	border: 1px solid lightgray;
+	box-shadow: 0px 8px 16px 0px lightgray;
+	left: -1px;
+	top: 32px;
+	width: 85px;
+	height: 38px;
+}
+#profile 
+{
+background-color: white;    
+border-radius: 1000px;
+padding: 0px;  
+border: 1px solid black;    
+}
+#firsthead
+{
+position: absolute;
+top: 133px;
+left: 45%;
+font-size: 32px;    
+font-family: californian fb;    
+}
+#links
+{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    border: 1px solid black;
+}
+
+#activest
+{
+	border:1px solid #66FFFF;
+	overflow:scroll;
+	position:absolute;
+	left: 43px;
+	top: 209px;
+	width: 353px;
+	height:380px;
+	background-color:#FFFFCC;
+}
+#issue
+{
+	position:absolute;
+	left: 383px;
+	top: 6px;
+}
+#manp
+{
+	position:absolute;
+	left: 101px;
+	top: 6px;
+}
+#manage
+{
+	position:absolute;
+	left: 98px;
+	top: 6px;
+}
+#activehead
+{
+	text-align:center;
+	font-weight:bold;
+	font-family:californinan fb;
+	font-size:16px;
+	color:#CC0033;
+}
