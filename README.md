@@ -4,7 +4,7 @@ Also allows different access privileges to staff and owner using cookie sessions
 
 Staff Privileges:
 1. Manage Products: Add, Update or delete products.
-2. Issue Product: Procees with billing.
+2. Issue Product: Process with billing.
 3. View Products going to go out of stock by setting a quantity limit.
 4. View Products going to expire.
 
