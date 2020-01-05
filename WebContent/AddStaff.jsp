@@ -2,6 +2,25 @@
 <head>
     <title>Add Staff</title>
 <link rel="stylesheet" type="text/css" href="css/AddStaff.css">    
+<%
+ 	ArrayList<String> ar=new ArrayList<String>();
+ 	try
+ 	{
+ 		String query="select Email from users";
+ 		Connection con=DBInfo.con;
+ 		PreparedStatement ps=con.prepareStatement(query);
+ 		ResultSet rs=ps.executeQuery();
+ 		while(rs.next())
+ 		{
+ 			ar.add(rs.getString(1));
+ 		}
+ 	}
+ 	catch(SQLException e)
+ 	{
+ 		e.printStackTrace();
+ 	}
+ System.out.println("Database values received");
+ %>
 </head>
 <body>
 <div id="nav">
@@ -29,7 +48,7 @@
     <td>
         <p class="label" id="mobile">Mobile Number</p>    </td>
     <td>
-    <input type="text" placeholder="Phone" name="phone" id="phonetx" required>    </td>
+    <input type="text" placeholder="Phone" name="phone" id="phonetx" maxlength="10" required>    </td>
 <tr>
     <td>
         <p class="label" id="dob">Date Of Birth</p>    </td>
@@ -158,38 +177,48 @@
     <td>
         <p class="label" id="branch">Branch</p>    </td>
     <td>
-        <input type="text" placeholder="Organisation Branch" name="branch" id="branchtx" required>    </td>
+        <input type="text" placeholder="Organisation Branch" name="branch" id="branchtx" maxlength="20" required>    </td>
 </tr>
 <tr>
     <td>
         <p class="label" id="pass">Password</p>    </td>
     <td>
-        <input type="password" placeholder="Password" name="pass" id="passtx" required>    </td>
+        <input type="password" placeholder="Password" name="pass" id="passtx" maxlength="20" required>    </td>
 </tr>
 <tr>
     <td>
         <p class="label" id="cnfpass">Confirm Password</p>    </td>
     <td>
-        <input type="password" placeholder="Password" name="cnfpass" id="cnfpasstx">    </td>
+        <input type="password" placeholder="Password" name="cnfpass" id="cnfpasstx" required>    </td>
 </tr>
 </table>
 <p id="alert"></p>        
 <input name="submit" type="submit" id="submit" value="Submit">
     </form>
 <script>
+<%
+//making array em(in js) from backend received database values
+out.print("var em=new Array('");
+int sz=ar.size();
+for(int i=0;i<sz-1;i++)
+{
+    out.print(ar.get(i)+"','");
+}
+out.print(ar.get(sz-1)+"');");
+%>
     function validateForm()
     {
         var x=document.forms["addst"]["pass"].value;
         var y=document.forms["addst"]["cnfpass"].value;
-        if(x==y)
+        if(x!=y)
         {
-            return true;
-        }
-        else
-        {
-        document.getElementById("alert").innerHTML="Passwords do not match";
+        	document.getElementById("alert").innerHTML="Passwords do not match";
             return false;
         }
+        if(em.indexOf(document.forms["addst"]["email"].value)==0){ 
+   		 document.getElementById("alert").innerHTML="Email account already registered with inventory"; 
+        	 return false;
+   	 }
     }
 </script>    
 </body>

@@ -15,7 +15,7 @@
 </div> <h1 id="firsthead">Update Product Info</h1>       
 <%
 String id=request.getParameter("radio");
-String query="select * from Products where ProductID=?";
+String query="select * from products where ProductID=?";
 String s[]=new String[10];   
 try
 {

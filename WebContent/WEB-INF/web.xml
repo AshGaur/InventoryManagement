@@ -90,5 +90,95 @@
 	<url-pattern>/Disconnect</url-pattern>
 </servlet-mapping>
 
+<servlet>
+	<servlet-name>ChangePass</servlet-name>
+	<servlet-class>sources.ChangePass</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>ChangePass</servlet-name>
+	<url-pattern>/ChangePass</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>Email</servlet-name>
+	<servlet-class>sources.Email</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>Email</servlet-name>
+	<url-pattern>/Email</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>SendVal</servlet-name>
+	<servlet-class>check.SendVal</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>SendVal</servlet-name>
+	<url-pattern>/SendVal</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>InvoiceToDB</servlet-name>
+	<servlet-class>sources.InvoiceToDB</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>InvoiceToDB</servlet-name>
+	<url-pattern>/InvoiceToDB</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>ClearUserLogs</servlet-name>
+	<servlet-class>sources.ClearUserLogs</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>ClearUserLogs</servlet-name>
+	<url-pattern>/ClearUserLogs</url-pattern>
+</servlet-mapping>
+
+<!-- Admin Classes -->
+<servlet>
+	<servlet-name>AdminCred</servlet-name>
+	<servlet-class>sources.AdminCred</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>AdminCred</servlet-name>
+	<url-pattern>/AdminCred</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>AdminSignout</servlet-name>
+	<servlet-class>sources.AdminSignout</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>AdminSignout</servlet-name>
+	<url-pattern>/AdminSignout</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>DelOrg</servlet-name>
+	<servlet-class>sources.DelOrg</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>DelOrg</servlet-name>
+	<url-pattern>/DelOrg</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>AddOrg</servlet-name>
+	<servlet-class>sources.AddOrg</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>AddOrg</servlet-name>
+	<url-pattern>/AddOrg</url-pattern>
+</servlet-mapping>
+
+<servlet>
+	<servlet-name>AddOwner</servlet-name>
+	<servlet-class>sources.AddOwner</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>AddOwner</servlet-name>
+	<url-pattern>/AddOwner</url-pattern>
+</servlet-mapping>
 
 </web-app>

@@ -1,0 +1,230 @@
+#nav
+{
+position: absolute;    
+top: 60px;
+left: 5px;    
+background-color: black;
+height: 43px;
+width: 100%;
+}
+#home
+{
+	position: absolute;
+	left: 6px;
+	width: 106px;
+	border-radius: 15px;
+	top: 6px;
+}
+a 
+{
+padding: 4px 4px;
+text-decoration: none;
+color: black;
+background-color: white;
+font-family: californian fb;    
+border: 1px solid black;
+border-radius: 5px;      
+text-align: center;    
+}
+a:hover
+{
+background-color: crimson;
+color: white;    
+}
+
+a#profile:hover+#dropdown-content
+{
+    display:block;
+}
+
+#dropdown-content:hover
+{
+    display:block;
+}
+#dropdown-content
+{
+    
+    display: none;
+	position: absolute;
+	top: 40px;
+	background-color: white;
+	box-shadow: 0px 8px 16px 0px lightgray;
+	width: 87px;
+	height: 66px;
+	left: 745px;
+}
+
+#dropdown-content a:hover
+{
+    background-color: crimson;
+    color: white;
+}
+#link1
+{
+	position: absolute;
+	border: 1px solid lightgray;
+	box-shadow: 0px 8px 16px 0px lightgray;
+	left: 0px;
+	top: 32px;
+	width: 85px;
+	height: 31px;
+}
+#link2
+{
+	position: absolute;
+	border: 1px solid lightgray;
+	box-shadow: 0px 8px 16px 0px lightgray;
+	
+	width: 85px;
+	height: 31px;
+}
+#profile 
+{
+	z-index:2;
+	position:absolute;
+	background-color: white;
+	border-radius: 1000px;
+	padding: 0px;
+	border: 1px solid black;
+	left: 745px;
+	top: 2px;
+	height: 41px;
+}
+#firsthead
+{
+position: absolute;
+top: 120px;
+left: 494px;
+font-size: 32px;    
+font-family: californian fb;    
+}
+#issue
+{
+	position:absolute;
+	left: 138px;
+	top: 7px;
+}
+#manp
+{
+	position:absolute;
+	left: 323px;
+	top: 7px;
+}
+#taborg
+{
+	position:absolute;
+	border:1px solid black;
+	left: 382px;
+	top: 205px;
+	width: 196px;
+}
+th
+{
+	background-color:black;
+	color:white;
+	font-size:20px;
+	text-align:center;
+}
+td
+{
+	font-size:20px;
+	text-align:center;
+}
+/*---------Delete Org div---------------------*/
+#delorg
+{
+	position:absolute;
+	border:1px solid black;
+	left: 638px;
+	top: 201px;
+	width: 228px;
+	height: 155px;
+	background-color:#FFFFCC;
+}
+#delhead
+{
+	position:absolute;
+	left: 33px;
+	top: 10px;
+}
+#delname
+{
+	position:absolute;
+	left: 34px;
+	top: 61px;
+	width: 151px;
+	border:1px solid black;
+}
+#delsub
+{
+	position:absolute;
+	left: 68px;
+	top: 110px;
+	border:1px solid black;
+}
+/*---------End of Delete Org div---------------------*/
+
+/*----------Add Org--------------------------------*/
+#addorgdiv
+{
+	position:absolute;
+	border:1px solid black;
+	width:317px;
+	height:327px;
+	left: 7px;
+	top: 200px;
+	background-color:#99CCCC;
+}
+#headcrown
+{
+	position:absolute;
+	left: 59px;
+	top: 11px;
+}
+#org
+{
+	position:absolute;
+	border:1px solid black;
+	left: 41px;
+	top: 60px;
+	width: 217px;
+}
+#oname
+{
+	position:absolute;
+	border:1px solid black;
+	left: 41px;
+	top: 103px;
+	width: 217px;
+}
+#eml
+{
+	position:absolute;
+	border:1px solid black;
+	left: 44px;
+	top: 147px;
+	width: 214px;
+}
+#pass
+{
+	position:absolute;
+	border:1px solid black;
+	left: 46px;
+	top: 196px;
+	width: 213px;
+}
+#cnfpass
+{
+	position:absolute;
+	border:1px solid black;
+	left: 48px;
+	top: 241px;
+	width: 212px;
+}
+#sub
+{
+	position:absolute;
+	border:1px solid black;
+	left: 96px;
+	top: 284px;
+}

@@ -11,11 +11,12 @@
 	<a href="NewIssue.jsp" id="issue">Issue Product</a>
 	<a href="ManageProducts.jsp" id="manp">Manage Products</a>
     <a class="navbutton" id="managest" href="ManageStaff.jsp">Manage Staff</a>
-    <div id="dropdown">
+	<a class="navbutton" id="viewinv" href="ViewInvoices.jsp">View Invoices</a>
     <a id="profile"><img src="images/profileicon.png" height="31px" width="31px"></a>
-    <div id="dropdown-content"><a id="link1" href="signout.jsp">Signout</a></div>
-  </div>    
-</div> <h1 id="firsthead">Owner Home</h1>         
+    <div id="dropdown-content"><a id="link2" href="Profile.jsp">Profile</a><a id="link1" href="signout.jsp">Signout</a></div>
+  
+</div>    
+ <h1 id="firsthead">Owner Home</h1>         
 <%
         String uname=null,id=null,org=null;
         Cookie[] c=request.getCookies();
@@ -103,5 +104,30 @@ function disconnect(valch)
 	document.getElementById("disconnecting").submit();
 }
 </script>
+<div id="userlog">
+	<p id="userloghead">UserLog</p>
+	<ul>
+<%
+	File file=new File(System.getProperty("FILE_PATH")+org+"userlog.txt");
+		try
+		{
+			if(!file.exists())
+			{
+				file.createNewFile();
+			}
+			Scanner sc=new Scanner(file);
+			while(sc.hasNextLine())
+			{
+				out.println("<li>"+sc.nextLine()+"</li>");
+			}
+			sc.close();
+		}
+		catch(IOException e)
+		{
+			e.printStackTrace();
+		}
+%>
+</ul>
+</div>
 </body>
 </html>    

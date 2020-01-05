@@ -7,7 +7,7 @@ public class DBInfo
 	{
 		  try {
 			    System.out.println("Loading driver...");
-			    Class.forName("com.mysql.jdbc.Driver");
+			    Class.forName("com.mysql.cj.jdbc.Driver");
 			    System.out.println("Driver loaded!");
 			  } catch (ClassNotFoundException e) {
 			    throw new RuntimeException("Cannot find the driver in the classpath!", e);
@@ -15,7 +15,6 @@ public class DBInfo
 		try
 		{
 			con=DriverManager.getConnection(System.getProperty("JDBC_CONNECTION_STRING"));
-			
 		}
 		catch(Exception e)
 		{

@@ -44,7 +44,7 @@ if(foundCookie)
      	System.out.println(n+"records updated with status false");
      	DateTimeFormatter dtf=DateTimeFormatter.ofPattern("dd/MM/yyyy hh:mm:ss");
     	LocalDateTime now=LocalDateTime.now();
-        File file=new File(org+"userlog.txt");
+    	File file=new File(System.getProperty("FILE_PATH")+org+"userlog.txt");
        	try
        	{
        		if(!file.exists())

@@ -10,7 +10,7 @@
  String s7=request.getParameter("org"); 
  String s8=request.getParameter("branch");  
  
- String query="insert into Products(ProductName,Price,Mfg,Expiry,Category,Qty,Organisation,Branch) values(?,?,?,?,?,?,?,?)";
+ String query="insert into products(ProductName,Price,Mfg,Expiry,Category,Qty,Organisation,Branch) values(?,?,?,?,?,?,?,?)";
  try
  {
  Connection con=DBInfo.con;

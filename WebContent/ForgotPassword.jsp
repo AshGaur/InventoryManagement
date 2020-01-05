@@ -6,9 +6,9 @@
  <body>
  <%
  	ArrayList<String> ar=new ArrayList<String>();
- 	String query="select Email from users";
  	try
  	{
+ 		String query="select Email from users";
  		Connection con=DBInfo.con;
  		PreparedStatement ps=con.prepareStatement(query);
  		ResultSet rs=ps.executeQuery();
@@ -35,33 +35,21 @@
      <script>
      <%
      //making array em(in js) from backend received database values
- 	out.println("var em=new Array('");
+ 	out.print("var em=new Array('");
      int sz=ar.size();
      for(int i=0;i<sz-1;i++)
      {
-         out.println(ar.get(i)+"','");
+         out.print(ar.get(i)+"','");
      }
-     out.println(ar.get(sz-1)+"');");
+     out.print(ar.get(sz-1)+"');");
  	%>
-         function validateForm()
-         {
-             var x=document.forms["myForm"]["email"].value;
-             var flag=false;
-          	 
-             if(x.length>0) 
-             {
-            	 if(em.indexOf(x)!=-1)
-            	 { 
-                 flag=true;
+ 	 var i;
+         function validateForm(){
+            	 if(em.indexOf(document.forms["myForm"]["email"].value)==-1){ 
+            		 document.getElementById("emalert").innerHTML="Email account not registered with inventory"; 
+                 	 return false;
             	 }
-            	 else
-            	 {
-            		 document.getElementById("emalert").innerHTML="Email account not registered with inventory";
-            		 flag=false;
-            	 }	 
-             }
-             return flag;
-            // return false;
+            	document.getElementById("emalert").innerHTML="Please Wait...";
          }
      </script>     
  </body>

@@ -1,0 +1,181 @@
+/*----------------Header STARTS------------------*/
+#nav
+{
+position: absolute;    
+top: 60px;
+left: 5px;    
+background-color: black;
+height: 43px;
+width: 100%;
+}
+#home
+{
+	position: absolute;
+	left: 6px;
+	width: 80px;
+	border-radius: 15px;
+	top: 6px;
+}
+a 
+{
+padding: 4px 4px;
+text-decoration: none;
+color: black;
+background-color: white;
+font-family: californian fb;    
+border: 1px solid black;
+border-radius: 5px;      
+text-align: center;    
+}
+a:hover
+{
+background-color: crimson;
+color: white;    
+}
+
+a#profile:hover+#dropdown-content
+{
+    display:block;
+}
+
+#dropdown-content:hover
+{
+    display:block;
+}
+#dropdown-content
+{
+    
+    display: none;
+	position: absolute;
+	top: 40px;
+	background-color: white;
+	box-shadow: 0px 8px 16px 0px lightgray;
+	width: 87px;
+	height: 66px;
+	left: 745px;
+}
+
+#dropdown-content a:hover
+{
+    background-color: crimson;
+    color: white;
+}
+#link1
+{
+	position: absolute;
+	border: 1px solid lightgray;
+	box-shadow: 0px 8px 16px 0px lightgray;
+	left: 0px;
+	top: 32px;
+	width: 85px;
+	height: 31px;
+}
+#link2
+{
+	position: absolute;
+	border: 1px solid lightgray;
+	box-shadow: 0px 8px 16px 0px lightgray;
+	
+	width: 85px;
+	height: 31px;
+}
+#profile 
+{
+	position:absolute;
+	background-color: white;
+	border-radius: 1000px;
+	padding: 0px;
+	border: 1px solid black;
+	left: 745px;
+	top: 2px;
+	height: 41px;
+}
+#firsthead
+{
+position: absolute;
+top: 120px;
+left: 494px;
+font-size: 32px;    
+font-family: californian fb;    
+}
+#manage
+{
+	position:absolute;
+	left: 103px;
+	top: 6px;
+}
+#issue
+{
+	position:absolute;
+	left: 258px;
+	top: 6px;
+}
+/*----------------Header ENDS------------------*/
+
+#invcs
+{
+	position:absolute;
+	background-color:#CCFFFF;
+	border:1px solid #00FFFF;
+	left: 51px;
+	top: 202px;
+	width: 999px;
+	height: 277px;
+	clear:both;
+}
+#invtable
+{
+	position:absolute;
+	left: 12px;
+	top: 185px;
+	width: 80%;
+	border:1px solid black;
+}
+td
+{
+	text-align:center;
+}
+th
+{
+	text-align:center;
+	border:1px solid black;
+	background-color:black;
+	color:white;
+}
+tr
+{
+	border:1px solid black;
+}
+
+/*-----------------Modal starts-------------------------------*/
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  
+  width: 100%; 	/* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+ /* width: 510px; */
+ width:40%;
+}
+
+
+/*----------------------Modal Ends--------------------------------*/

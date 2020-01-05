@@ -6,7 +6,7 @@
 <body>
 <div id="nav">
     <a class="navbutton" id="home" href="homeOwner.jsp">Home</a>
-    <a class="navbutton" id="managest" href="ManageStaff.jsp">Manage Staff</a>
+    <a  id="managest" href="ManageProducts.jsp">Manage Products</a>
     <div id="dropdown">
     <a id="profile"><img src="images/profileicon.png" height="31px" width="31px"></a>
     <div id="dropdown-content"><a id="link1" href="signout.jsp">Signout</a></div>
@@ -18,7 +18,7 @@
     <td width="132">    
     <p class="label" id="name">Product Name</p>    </td>
     <td width="308">
-    <input type="text" placeholder="Name" name="name" id="nametx" required>    </td>
+    <input type="text" placeholder="Name" name="name" id="nametx" maxlength="20" required>    </td>
 <tr>
     <td>
         <p class="label" id="email">Product Price</p>    </td>
@@ -39,7 +39,7 @@
     <td>
         <p class="label" id="doj">Category</p>    </td>
     <td>
-        <input type="text" placeholder="Category" name="cat" id="dojtx" required>    </td>
+        <input type="text" placeholder="Category" name="cat" id="dojtx" maxlength="30" required>    </td>
 </tr>
 <tr>
     <td>
@@ -103,11 +103,11 @@
     <td>
         <p class="label" id="pass">Branch</p>    </td>
     <td>
-        <input type="text" placeholder="Branch" name="branch" id="passtx" required>    </td>
+        <input type="text" placeholder="Branch" name="branch" id="passtx" maxlength="20" required>    </td>
 </tr>    
-    </table>
+   </table>
 <p id="alert"></p>        
 <input name="submit" type="submit" id="submit" value="Submit">
-    </form>
-    </body>
+</form>
+</body>
 </html>

@@ -20,12 +20,13 @@ public class BillToDB extends HttpServlet{
 		}
 		return str.substring(start,end);
 	}
-	public void EnterToDB(String pid,String pname,String qty,String price,String amt)
+	public void EnterToDB(String pid,String pname,String qty,String price,String amt,String org)
 	{
+		
 		try
 		{
 		Connection con=DBInfo.con;
-		String query="insert into bill values(?,?,?,?,?)";
+		String query="insert into "+SubStr(org)+"bill values(?,?,?,?,?)";
 		PreparedStatement ps=con.prepareStatement(query);
 		ps.setString(1, SubStr(pid));
 		ps.setString(2, SubStr(pname));
@@ -42,7 +43,8 @@ public class BillToDB extends HttpServlet{
 	}
 	public void service(HttpServletRequest req,HttpServletResponse res) throws IOException
 	{
-		File file=new File("bill.txt");
+
+		File file=new File(System.getProperty("FILE_PATH")+"bill.txt");
 		try
 		{
 			if(!file.exists())
@@ -55,8 +57,9 @@ public class BillToDB extends HttpServlet{
 			String qty=sc.nextLine();
 			String price=sc.nextLine();
 			String amt=sc.nextLine();
+			String org=sc.nextLine();
 			sc.close();
-			EnterToDB(pid,pname,qty,price,amt);
+			EnterToDB(pid,pname,qty,price,amt,org);
 		}
 		catch(IOException e)
 		{

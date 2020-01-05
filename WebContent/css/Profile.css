@@ -1,0 +1,156 @@
+#nav
+{
+position: absolute;    
+top: 60px;
+left: 5px;    
+background-color: black;
+height: 43px;
+width: 100%;
+}
+#home
+{
+	position: absolute;
+	left: 6px;
+	width: 80px;
+	border-radius: 15px;
+	top: 6px;
+}
+#managest
+{
+	position: absolute;
+	width: 110px;
+	left: 108px;
+	border-radius: 15px;
+	top: 7px;
+}
+a 
+{
+padding: 4px 4px;
+text-decoration: none;
+color: black;
+background-color: white;
+font-family: californian fb;    
+border: 1px solid black;
+border-radius: 5px;      
+text-align: center;    
+}
+a:hover
+{
+background-color: crimson;
+color: white;    
+}
+
+a#profile:hover+#dropdown-content
+{
+    display:block;
+}
+
+#dropdown-content:hover
+{
+    display:block;
+}
+#dropdown-content
+{
+    
+    display: none;
+	position: absolute;
+	top: 40px;
+	background-color: white;
+	box-shadow: 0px 8px 16px 0px lightgray;
+	width: 87px;
+	height: 66px;
+	left: 745px;
+}
+
+#dropdown-content a:hover
+{
+    background-color: crimson;
+    color: white;
+}
+#link1
+{
+	position: absolute;
+	border: 1px solid lightgray;
+	box-shadow: 0px 8px 16px 0px lightgray;
+	left: 0px;
+	top: 32px;
+	width: 85px;
+	height: 31px;
+}
+#link2
+{
+	position: absolute;
+	border: 1px solid lightgray;
+	box-shadow: 0px 8px 16px 0px lightgray;
+	
+	width: 85px;
+	height: 31px;
+}
+#profile 
+{
+	z-index:2;
+	position:absolute;
+	background-color: white;
+	border-radius: 1000px;
+	padding: 0px;
+	border: 1px solid black;
+	left: 745px;
+	top: 2px;
+	height: 41px;
+}
+#firsthead
+{
+	position: absolute;
+	top: 120px;
+	left: 494px;
+	font-size: 40px;
+	font-family: californian fb;
+	width: 122px;
+	height: 48px;
+}
+#issue
+{
+	position:absolute;
+	left: 109px;
+	top: 6px;
+}
+#manp
+{
+	position:absolute;
+	left: 235px;
+	top: 6px;
+}
+#maindiv
+{
+	position:absolute;
+	background-color:#99FFFF;
+	width:1022px;
+	left: 43px;
+	top: 202px;
+	height: 437px;
+}
+#tablefir
+{
+	font-size:20px;
+	position:absolute;
+	left: 300px;
+	top: 10px;
+	width: 725px;
+	height: 104px;
+}
+#tablefir th
+{
+	text-align:left;
+	height:60px;
+	width:252px;
+}
+#tablefir td
+{
+	width:473;
+}
+#tablesec
+{
+	top:300px;
+	left:400px;
+	position:absolute;
+}

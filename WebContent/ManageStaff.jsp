@@ -44,7 +44,7 @@ $(document).ready(function(){
 </head>    
 <body>    
 <div id="nav">
-    <a class="navbutton" id="home" href="homeOwner.jsp">Home</a>
+    <a onclick="sendHome();" id="home" onmouseover="document.getElementById('home').style.cursor='pointer'">Home</a>
     <div id="dropdown">
     <a id="profile"><img src="images/profileicon.png" height="31px" width="31px"></a>
     <div id="dropdown-content"><a id="link1" href="signout.jsp">Signout</a></div>
@@ -149,6 +149,21 @@ $(document).ready(function(){
             response.sendRedirect("index.jsp");                                     
         }                                             
 %>               
-
+<script>
+function sendHome()
+{
+	<% out.println("var ut='"+utype+"';"); %>
+		
+		if(ut.localeCompare("Staff")==0)
+		{
+			window.location.href = "homeStaff.jsp";
+		}
+		else
+		{
+			window.location.href = "homeOwner.jsp";
+		}
+	
+}
+</script>
     </body>
 </html>    

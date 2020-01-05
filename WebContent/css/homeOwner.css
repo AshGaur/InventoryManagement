@@ -19,7 +19,7 @@ width: 100%;
 {
 	position: absolute;
 	width: 110px;
-	left: 254px;
+	left: 368px;
 	border-radius: 15px;
 	top: 6px;
 }
@@ -40,34 +40,28 @@ background-color: crimson;
 color: white;    
 }
 
-#dropdown:hover #dropdown-content
+a#profile:hover+#dropdown-content
 {
     display:block;
 }
 
+#dropdown-content:hover
+{
+    display:block;
+}
 #dropdown-content
 {
     
     display: none;
-	border: 1px solid lightgray;
 	position: absolute;
 	top: 40px;
 	background-color: white;
 	box-shadow: 0px 8px 16px 0px lightgray;
-	width: 82px;
-	height: 30px;
-	left: 0px;
+	width: 87px;
+	height: 66px;
+	left: 745px;
 }
-#dropdown
-{
-    display: block;
-    background-color: black;
-    width: 50px;
-    height: 40px;
-    position: absolute;
-    left: 75%;
-    top: 3px;
-}
+
 #dropdown-content a:hover
 {
     background-color: crimson;
@@ -76,26 +70,39 @@ color: white;
 #link1
 {
 	position: absolute;
-	padding: 10 15;
 	border: 1px solid lightgray;
 	box-shadow: 0px 8px 16px 0px lightgray;
-	left: -1px;
+	left: 0px;
 	top: 32px;
 	width: 85px;
-	height: 38px;
+	height: 31px;
+}
+#link2
+{
+	position: absolute;
+	border: 1px solid lightgray;
+	box-shadow: 0px 8px 16px 0px lightgray;
+	
+	width: 85px;
+	height: 31px;
 }
 #profile 
 {
-background-color: white;    
-border-radius: 1000px;
-padding: 0px;  
-border: 1px solid black;    
+	z-index:2;
+	position:absolute;
+	background-color: white;
+	border-radius: 1000px;
+	padding: 0px;
+	border: 1px solid black;
+	left: 745px;
+	top: 2px;
+	height: 41px;
 }
 #firsthead
 {
 position: absolute;
-top: 133px;
-left: 45%;
+top: 120px;
+left: 494px;
 font-size: 32px;    
 font-family: californian fb;    
 }
@@ -124,20 +131,20 @@ font-family: californian fb;
 #issue
 {
 	position:absolute;
-	left: 383px;
-	top: 6px;
+	left: 97px;
+	top: 7px;
 }
 #manp
 {
 	position:absolute;
-	left: 101px;
+	left: 219px;
 	top: 6px;
 }
 #manage
 {
 	position:absolute;
-	left: 98px;
-	top: 6px;
+	left: 220px;
+	top: 7px;
 }
 #activehead
 {
@@ -146,4 +153,117 @@ font-family: californian fb;
 	font-family:californinan fb;
 	font-size:16px;
 	color:#CC0033;
+}
+/*homeStaff elements */
+
+#qtycheck
+{
+	position:absolute;
+	border:1px solid lightgray;
+	left: 42px;
+	top: 191px;
+	background-color:#99FFFF;
+	border:1px solid #99FFFF;
+	width: 385px;
+	height: 271px;
+}
+#qtycheckhead
+{
+	position:absolute;
+	font-family:californian fb;
+	color:#FF0033;
+	font-weight:bold;
+	font-size:20px;
+	left: 33px;
+	top: 8px;
+	
+}
+#qtytable
+{
+	top:58px;
+	position:absolute;
+	left: 35px;
+	border:1px solid gray;
+}
+table#qtytable td
+{
+	text-align:center;
+	border:1px solid gray;
+}
+#expirepros
+{
+	position:absolute;
+	overflow:scroll;
+	border:1px solid lightgray;
+	background-color:#FFCC99;
+	left: 616px;
+	top: 190px;
+	width: 478px;
+	height: 270px;
+}
+#exphead
+{
+	text-align:center;
+	font-weight:bold;
+	font-style:californian fb;
+	font-size:20px;
+	color:#0000CC;
+}
+#exptable
+{
+	border:1px solid gray;
+	position:absolute;
+	left: 22px;
+	top: 65px;
+	height: 36px;
+	width: 431px;
+}
+table#exptable td
+{
+	text-align:center;
+	border:1px solid gray;
+}
+th
+{
+	border: 1px solid gray;
+}
+
+/*homeOwner	*/
+#userlog
+{
+	position:absolute;
+	border:1px solid #999999;
+	background-color:#99FFFF;
+	left: 566px;
+	top: 204px;
+	width: 485px;
+	height: 381px;
+	overflow:scroll;
+}
+#userloghead
+{
+	position:absolute;
+	font-weight:bold;
+	font-family:californian fb;
+	font-size:20px;
+	color:#FF3300;
+	left: 205px;
+	top: 3px;
+}
+li
+{
+	list-style-type:none;
+	color:black;
+}
+ul
+{
+	position:absolute;
+	left: 2px;
+	top: 56px;
+}
+#viewinv
+{
+	position:absolute;
+	left: 492px;
+	top: 6px;
 }

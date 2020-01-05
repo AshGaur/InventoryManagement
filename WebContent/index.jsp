@@ -49,6 +49,7 @@
 %>
 <head>
     <link rel="stylesheet" type="text/css" href="css/Login.css">
+    <title>My Inventory</title>
 </head>
 <body>    
 <div class="first">
@@ -80,10 +81,6 @@
         document.getElementById("passalert").innerHTML= "Password must be entered";
                 document.getElementById("pass").focus();
                 return false;
-            }
-            else
-            {
-                return true;
             }
     }
     </script>

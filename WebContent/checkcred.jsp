@@ -41,8 +41,8 @@
         System.out.println("records found in the database");
         DateTimeFormatter dtf=DateTimeFormatter.ofPattern("dd/MM/yyyy hh:mm:ss");
     	LocalDateTime now=LocalDateTime.now();
-        File file=new File(org+"userlog.txt");
-       	try
+        File file=new File(System.getProperty("FILE_PATH")+org+"userlog.txt");
+        try
        	{
        		if(!file.exists())
             {
@@ -56,9 +56,6 @@
        	{
        		e.printStackTrace();
        	}
-        
-        
-        
         String query1="update users set state='true' where id=?";
         PreparedStatement ps1=con.prepareStatement(query1);
         ps1.setString(1,Integer.toString(id));

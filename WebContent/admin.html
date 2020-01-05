@@ -1,0 +1,20 @@
+<html>
+    <head>
+    <title>Admin</title>
+        <script src="js/validateAdmin.js"></script>   
+    </head>
+		<body>
+            <center>
+                <h1>Admin Panel</h1><br>
+                <p style="color:red" id="alt"></p>
+                <br>
+                <form name="adm" onsubmit="return validateAdmin();" method="post" action="AdminCred">
+                <input type="text" name="uname" placeholder="Username" id="us" autocomplete="off" required />
+                <br>
+                <input type="password" name="pass" placeholder="Password" id="ps" autocomplete="new-password" required />
+                <br>
+                <input type="submit" />
+                </form>
+		    </center>   
+    </body>
+</html>
