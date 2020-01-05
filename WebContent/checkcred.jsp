@@ -4,6 +4,23 @@
 <html>    
 <body>
 <% 
+	String guestemail=request.getParameter("guestemail");
+	if(!guestemail.equals("null@invm.com"))
+	{
+		try
+		{
+			Connection con=DBInfo.con;
+			String quer="insert into Guest values(?,NOW())";
+			PreparedStatement ps=con.prepareStatement(quer);
+			ps.setString(1,guestemail);
+			int n=ps.executeUpdate();
+			System.out.println(n+ "guest entry made");
+		}
+		catch(SQLException e)
+		{
+			e.printStackTrace();
+		}
+	}
     String s1=request.getParameter("email");
     String s2=request.getParameter("pass");
     String utype=null,uname=null;

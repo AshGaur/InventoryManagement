@@ -1,3 +1,16 @@
+#credit
+{
+	position:absolute;
+	left: 17px;
+	top: 89px;
+	font-size:20px;
+	font-family:Bradley Hand ITC,californian fb;
+}
+#crename
+{
+	font-weight:bold;
+	color:#3333CC;
+}
 .first
 {
 position: absolute;
@@ -115,4 +128,44 @@ input[type=password]:focus
     font-size: 15px;
     color:red;
     
+}
+#guestem
+{
+	display:none;	
+	position:absolute;
+	border: 1px groove lightgray;
+	font-family: californian fb;
+	height: 25px;
+	width: 222px;
+	background-color: white;
+	padding: 2px;
+	left: 77px;
+	top: 117px;
+}
+#guestlogin
+{
+	position:absolute;
+	left: 688px;
+	top: 139px;
+	font-family: californian fb;
+    font-weight: bold;
+	font-size:20px;
+}
+a#guestlogin:hover
+{
+	cursor:pointer;
+}
+#uslogin
+{
+	display:none;	
+	position:absolute;
+	font-family: californian fb;
+	font-weight: bold;
+	font-size:20px;
+	left: 451px;
+	top: 146px;
+}
+a#uslogin:hover
+{
+	cursor:pointer;
 }
